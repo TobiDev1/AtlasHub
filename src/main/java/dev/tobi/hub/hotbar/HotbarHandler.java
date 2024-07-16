@@ -2,12 +2,9 @@ package dev.tobi.hub.hotbar;
 
 import dev.tobi.hub.utility.ItemBuilder;
 import dev.tobi.hub.utility.Util;
-import org.bukkit.ChatColor;
-import org.bukkit.DyeColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.material.Dye;
 
 import java.util.Collections;
 

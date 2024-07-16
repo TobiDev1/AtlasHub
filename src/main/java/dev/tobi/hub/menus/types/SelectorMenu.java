@@ -1,6 +1,5 @@
 package dev.tobi.hub.menus.types;
 
-import dev.tobi.hub.hotbar.HotbarHandler;
 import dev.tobi.hub.menus.MenuCreator;
 import dev.tobi.hub.utility.ItemBuilder;
 import dev.tobi.hub.utility.Util;

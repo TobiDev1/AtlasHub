@@ -8,13 +8,20 @@ import org.bukkit.ChatColor;
 import org.bukkit.craftbukkit.v1_8_R3.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 /**
  * DevTobi has Created For Project AtlasHub 14/07/2024 08:58 p. m.
  **/
 public class Util {
 
-    public static String translate(String s) {
-        return ChatColor.translateAlternateColorCodes('&', s);
+    public static String translate(String input) {
+        return ChatColor.translateAlternateColorCodes('&', input).replace("\n", "\n");
+    }
+
+    public static List<String> translate(List<String> input) {
+        return input.stream().map(Util::translate).collect(Collectors.toList());
     }
 
     public static void log(String s) {

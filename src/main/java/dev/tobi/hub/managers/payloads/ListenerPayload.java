@@ -2,11 +2,6 @@ package dev.tobi.hub.managers.payloads;
 
 import dev.tobi.hub.AtlasHub;
 import dev.tobi.hub.listeners.*;
-
-import dev.tobi.hub.listeners.score.ScoreCreateListener;
-import dev.tobi.hub.listeners.score.ScoreDeleteListener;
-import dev.tobi.hub.menus.MenuCreator;
-import dev.tobi.hub.menus.types.SelectorMenu;
 import org.bukkit.plugin.PluginManager;
 
 /**
@@ -26,8 +21,6 @@ public class ListenerPayload {
         pm.registerEvents(new JoinListener(), atlasHub);
         pm.registerEvents(new ProtectionListener(), atlasHub);
         pm.registerEvents(new InteractListener(), atlasHub);
-        pm.registerEvents(new ScoreCreateListener(), atlasHub);
-        pm.registerEvents(new ScoreDeleteListener(), atlasHub);
         pm.registerEvents(new MenuListener(), atlasHub);
         //pm.registerEvents(new InvListener(), atlasHub);
         pm.registerEvents(new LunarListener(), atlasHub);

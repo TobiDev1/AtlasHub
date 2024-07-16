@@ -1,6 +1,5 @@
 package dev.tobi.hub.providers;
 
-import dev.tobi.hub.managers.payloads.ProviderPayload;
 import dev.tobi.hub.utility.SkinUtil;
 import dev.tobi.hub.utility.Util;
 import me.activated.core.plugin.AquaCoreAPI;

@@ -2,7 +2,6 @@ package dev.tobi.hub.listeners;
 
 import dev.tobi.hub.hotbar.HotbarHandler;
 import dev.tobi.hub.menus.types.SelectorMenu;
-import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;

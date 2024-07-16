@@ -23,24 +23,35 @@ public class InteractListener implements Listener {
         Player player = event.getPlayer();
 
         if (event.getAction() == Action.RIGHT_CLICK_BLOCK || event.getAction() == Action.RIGHT_CLICK_AIR) {
-            if (event.getItem().isSimilar(HotbarHandler.selector)) {
-                player.openInventory((Inventory) new SelectorMenu(9, Util.translate("&cSelector Menu")));
-                player.getInventory().setItem(5, HotbarHandler.hub);
-                player.getInventory().setItem(6, HotbarHandler.hub2);
+            if (event.getItem().equals(HotbarHandler.selector)) {
+                SelectorMenu selectorMenu = new SelectorMenu(9, Util.translate("&cSelector Menu"));
+                selectorMenu.createMenu(selectorMenu.getInventory(), player); // Create Inventory
+
+                player.openInventory(selectorMenu.getInventory()); // Open Inventory
+
+                player.getInventory().setItem(20, HotbarHandler.hub);
+                player.getInventory().setItem(22, HotbarHandler.hub2);
+
                 player.updateInventory();
                 player.playSound(player.getLocation(), Sound.LEVEL_UP, 1.0f, 1.0f);
-            } else if (event.getItem().isSimilar(HotbarHandler.viewPlayer)) {
+            } else if (event.getItem().equals(HotbarHandler.viewPlayer)) {
                 for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
                     player.hidePlayer(onlinePlayer);
                 }
                 player.getInventory().setItemInHand(HotbarHandler.offPlayer);
                 player.updateInventory();
-            } else if (event.getItem().isSimilar(HotbarHandler.offPlayer)) {
+            } else if (event.getItem().equals(HotbarHandler.offPlayer)) {
                 for (Player onlinePlayer : Bukkit.getOnlinePlayers()) {
                     player.showPlayer(onlinePlayer);
                 }
                 player.getInventory().setItemInHand(HotbarHandler.viewPlayer);
                 player.updateInventory();
+            } else if (event.getItem().equals(HotbarHandler.enderpearl)) {
+                player.setVelocity(player.getLocation().getDirection().multiply(1.5F));
+                event.setCancelled(true);
+                player.getInventory().setItem(3, HotbarHandler.enderpearl);
+                player.updateInventory();
+                player.playSound(player.getLocation(), Sound.ENDERMAN_TELEPORT, 1.0F, 1.0F);
             }
         }
     }

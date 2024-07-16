@@ -20,12 +20,15 @@ public class BuildCMD implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
-        if (sender instanceof Player player) {
+        if (sender instanceof Player) {
+            Player player = (Player) sender;
             if (player.hasPermission("hub.build")) {
                 if (args.length == 0) {
                     if (!players.containsKey(player.getUniqueId())) {
                         players.put(player.getUniqueId(), player);
                         player.sendMessage(Util.translate("&aBuild Mode has been enabled"));
+                    } else {
+                        player.sendMessage(Util.translate("&cUse for disable buildmode /build disable"));
                     }
                 } else if (args.length == 1 && args[0].equalsIgnoreCase("disable")) {
                     if (players.containsKey(player.getUniqueId())) {

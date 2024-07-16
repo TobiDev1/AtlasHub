@@ -11,6 +11,7 @@ import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.inventory.InventoryMoveItemEvent;
 import org.bukkit.event.player.PlayerDropItemEvent;
 import org.bukkit.event.player.PlayerPickupItemEvent;
 
@@ -72,5 +73,20 @@ public class ProtectionListener implements Listener {
         }
     }
 
+    @EventHandler
+    public void onPvP(EntityDamageEvent event) {
+        event.setCancelled(true);
+    }
+
+    @EventHandler
+    public void onPutItems(InventoryMoveItemEvent event) {
+        Player player = (Player) event;
+        if (BuildCMD.getPlayers().containsKey(player.getUniqueId())
+                && player.hasPermission("hub.build")) {
+            event.setCancelled(false);
+        } else {
+            event.setCancelled(true);
+        }
+    }
 
 }

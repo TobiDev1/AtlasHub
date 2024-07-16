@@ -42,6 +42,10 @@ public class ItemBuilder {
         this.item = new ItemStack(material, quantity);
     }
 
+    public ItemBuilder(Material material, int quantity, short i) {
+        this.item = new ItemStack(material, quantity, i);
+    }
+
     public ItemBuilder setQuantity(final int quantity) {
         item.setAmount(quantity);
         return this;

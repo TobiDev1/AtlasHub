@@ -17,7 +17,6 @@ import java.util.UUID;
 public class ProviderPayload {
 
     @Getter private static ProviderPayload instance;
-
     private final AtlasHub atlasHub;
 
     @Getter private final Map<UUID, FastBoard> boards = new HashMap<>();
@@ -32,12 +31,6 @@ public class ProviderPayload {
     public void registerProviders() {
         tabHandler = new Edge(atlasHub, new TabProvider());
 
-        ScoreProvider scoreProvider = new ScoreProvider();
 
-        atlasHub.getServer().getScheduler().runTaskTimer(atlasHub, () -> {
-            for (FastBoard board : boards.values()) {
-                scoreProvider.updateBoard(board);
-            }
-        }, 0L, 20);
     }
 }

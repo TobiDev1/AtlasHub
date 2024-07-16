@@ -7,6 +7,7 @@ import org.bukkit.DyeColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.material.Dye;
 
 import java.util.Collections;
 
@@ -16,9 +17,9 @@ import java.util.Collections;
 public class HotbarHandler {
 
     public static void onGiveItems(Player player) {
-        player.getInventory().setItem(0, enderpearl);
-        player.getInventory().setItem(1, selector);
-        player.getInventory().setItem(2, viewPlayer);
+        player.getInventory().setItem(3, enderpearl);
+        player.getInventory().setItem(4, selector);
+        player.getInventory().setItem(5, viewPlayer);
     }
 
 
@@ -28,17 +29,17 @@ public class HotbarHandler {
             .setLore(Collections.singletonList(Util.translate("&7Right click to use")))
             .build();
 
-    public static ItemStack selector = new ItemBuilder(Material.COMPASS)
+    public static ItemStack selector = new ItemBuilder(Material.NETHER_STAR)
             .name(Util.translate("&c&lServer Selector"))
             .setLore(Collections.singletonList(Util.translate("&7Right click to use")))
             .build();
 
-    public static ItemStack viewPlayer = new ItemBuilder(Material.INK_SACK, DyeColor.LIME.getData())
+    public static ItemStack viewPlayer = new ItemBuilder(Material.getMaterial(351), 1, (short) 10)
             .name(Util.translate("&a&lPlayers Visible"))
             .setLore(Collections.singletonList(Util.translate("&7Right click to hide players")))
             .build();
 
-    public static ItemStack offPlayer = new ItemBuilder(Material.INK_SACK, DyeColor.GRAY.getData())
+    public static ItemStack offPlayer = new ItemBuilder(Material.getMaterial(351), 1, (short) 8)
             .name(Util.translate("&c&lPlayers Hidden"))
             .setLore(Collections.singletonList(Util.translate("&7Right click to show players")))
             .build();

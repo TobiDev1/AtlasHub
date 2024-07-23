@@ -21,13 +21,13 @@ public class HotbarHandler {
 
 
     public static ItemStack enderpearl = new ItemBuilder(Material.ENDER_PEARL)
-            .name(Util.translate("&c&lEnderpearl"))
+            .name(Util.translate("&5&lEnderpearl"))
             .setQuantity(64)
             .setLore(Collections.singletonList(Util.translate("&7Right click to use")))
             .build();
 
     public static ItemStack selector = new ItemBuilder(Material.NETHER_STAR)
-            .name(Util.translate("&c&lServer Selector"))
+            .name(Util.translate("&5&lServer Selector"))
             .setLore(Collections.singletonList(Util.translate("&7Right click to use")))
             .build();
 
@@ -37,17 +37,17 @@ public class HotbarHandler {
             .build();
 
     public static ItemStack offPlayer = new ItemBuilder(Material.getMaterial(351), 1, (short) 8)
-            .name(Util.translate("&c&lPlayers Hidden"))
+            .name(Util.translate("&5&lPlayers Hidden"))
             .setLore(Collections.singletonList(Util.translate("&7Right click to show players")))
             .build();
 
     public static ItemStack hub = new ItemBuilder(Material.BEACON)
-            .name(Util.translate("&c&lHub-1"))
+            .name(Util.translate("&5&lHub-1"))
             .setLore(Collections.singletonList(Util.translate("&7Right click to use")))
             .build();
 
     public static ItemStack hub2 = new ItemBuilder(Material.BEACON)
-            .name(Util.translate("&c&lHub-2"))
+            .name(Util.translate("&5&lHub-2"))
             .setLore(Collections.singletonList(Util.translate("&7Right click to use")))
             .build();
 

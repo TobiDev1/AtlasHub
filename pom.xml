@@ -55,7 +55,7 @@
             <artifactId>aqua</artifactId>
             <version>LATEST</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/AquaCoreAPI.jar</systemPath>
+            <systemPath>${project.basedir}/lib/AquaCore-3.0.15.jar</systemPath>
         </dependency>
 
         <dependency>
@@ -63,7 +63,7 @@
             <artifactId>LunarClient</artifactId>
             <version>LASTEST</version>
             <scope>system</scope>
-            <systemPath>${project.basedir}/libs/LunarClientAPI.jar</systemPath>
+            <systemPath>${project.basedir}/lib/bukkitapi-1.0.jar</systemPath>
         </dependency>
 
         <dependency>

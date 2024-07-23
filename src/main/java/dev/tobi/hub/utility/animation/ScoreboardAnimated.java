@@ -15,8 +15,8 @@ public class ScoreboardAnimated {
     @Getter
     private static String footer;
 
-    private static final List<String> TITLES = Arrays.asList("&5A", "&5At", "&5Atl", "&5Atla", "&5Atlas", "&5AtlasM", "&5AtlasMC");
-    private static final List<String> FOOTERS = Arrays.asList("&7discord.gg/AtlasMC", "&7twitter.com/AtlasMC", "&7ts.atlas.live", "&7store.atlas.live");
+    private static final List<String> TITLES = Arrays.asList("&5&lA", "&5&lAt", "&5&lAtl", "&5&lAtla", "&5&lAtlas", "&5&lAtlasM", "&5&lAtlasMC");
+    private static final List<String> FOOTERS = Arrays.asList("&7dsc.gg/atlasmcnt", "&7twitter.com/@AtlasMC143", "&7ts.atlas.live", "&7store.atlas.live");
     private static final boolean TITLE_ANIMATED_ENABLED = true;
     private static final boolean FOOTER_ANIMATED_ENABLED = true;
 

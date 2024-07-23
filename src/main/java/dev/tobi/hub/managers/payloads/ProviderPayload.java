@@ -1,7 +1,11 @@
 package dev.tobi.hub.managers.payloads;
 
 import dev.tobi.hub.AtlasHub;
+import dev.tobi.hub.providers.Adapter;
 import dev.tobi.hub.providers.TabProvider;
+import dev.tobi.hub.utility.animation.ScoreboardAnimated;
+import io.github.thatkawaiisam.assemble.Assemble;
+import io.github.thatkawaiisam.assemble.AssembleStyle;
 import lombok.Getter;
 import me.lucanius.edge.Edge;
 
@@ -23,6 +27,10 @@ public class ProviderPayload {
     public void registerProviders() {
         tabHandler = new Edge(atlasHub, new TabProvider());
 
+        ScoreboardAnimated.init();
+        Assemble assemble = new Assemble(atlasHub, new Adapter());
+        assemble.setTicks(2);
+        assemble.setAssembleStyle(AssembleStyle.MODERN);
 
     }
 }

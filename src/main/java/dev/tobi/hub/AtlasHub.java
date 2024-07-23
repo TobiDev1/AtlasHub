@@ -27,11 +27,6 @@ public final class AtlasHub extends JavaPlugin {
         this.loader = new ManagerLoader(this);
         this.loader.enable();
 
-        ScoreboardAnimated.init();
-        Assemble assemble = new Assemble(this, new Adapter());
-        assemble.setTicks(2);
-        assemble.setAssembleStyle(AssembleStyle.MODERN);
-
         Util.log("&4AtlasHub has been enabled!");
     }
 
